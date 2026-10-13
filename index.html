@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Big Water Technology Group | Managed IT from Okeechobee to Fellsmere</title>
+<title>Big Water Technology | Managed IT from Okeechobee to Fellsmere</title>
 <meta name="description" content="Locally operated managed IT, cybersecurity, and cloud support for ranches, clinics, shops, contractors, churches, and local governments from Lake Okeechobee to the Indian River Lagoon. Okeechobee · Fellsmere · Sebastian · Vero Beach.">
-<meta property="og:title" content="Big Water Technology Group">
+<meta property="og:title" content="Big Water Technology">
 <meta property="og:description" content="IT support that runs from the Lake to the Lagoon. Business and public sector. Okeechobee to Fellsmere, FL.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%230f2f44%27/%3E%3Cpath d=%27M10 40c6-8 12-8 18 0s12 8 18 0 8-6 8-6%27 fill=%27none%27 stroke=%27%2358c3cf%27 stroke-width=%275%27 stroke-linecap=%27round%27/%3E%3Cpath d=%27M10 28c6-8 12-8 18 0s12 8 18 0 8-6 8-6%27 fill=%27none%27 stroke=%27%23fff%27 stroke-width=%275%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
@@ -16,7 +16,7 @@
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Big Water Technology Group",
+  "name": "Big Water Technology",
   "legalName": "Competence Collective LLC",
   "description": "Managed IT services, cybersecurity, and cloud support for businesses and public-sector organizations from Okeechobee to Fellsmere, Florida.",
   "areaServed": ["Okeechobee, FL", "Fellsmere, FL", "Sebastian, FL", "Vero Beach, FL", "Okeechobee County, FL", "Indian River County, FL"],
@@ -81,9 +81,8 @@
   header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--sand) 90%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
   nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px;position:relative}
   .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
-  .logo svg{width:36px;height:36px;flex:none}
-  .logo b{font-family:var(--display);font-size:1.15rem;font-weight:700;letter-spacing:-.01em;line-height:1}
-  .logo small{display:block;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+  .logo svg{width:40px;height:40px;flex:none;border-radius:11px;box-shadow:0 6px 14px -8px rgba(11,34,49,.7)}
+  .logo b{font-family:var(--display);font-size:1.3rem;font-weight:700;letter-spacing:-.01em;line-height:1;white-space:nowrap}
   .links{display:flex;gap:24px;align-items:center}
   .links a{text-decoration:none;color:var(--ink-2);font-weight:500;font-size:.95rem}
   .links a:hover{color:var(--lagoon-ink)}
@@ -95,8 +94,7 @@
     .links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--paper);padding:16px 20px 22px;border-bottom:1px solid var(--line);align-items:flex-start;gap:18px}
     .links.open{display:flex}
     .menu-toggle{display:block}
-    .logo b{font-size:.98rem}
-    .logo small{font-size:.6rem}
+    .logo b{font-size:1.05rem}
   }
   .sr{position:absolute;left:-9999px}
 
@@ -105,20 +103,31 @@
   .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
   @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
   .hero h1 em{font-style:italic;color:var(--lagoon-ink)}
-  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
-  .ticks{display:flex;flex-wrap:wrap;gap:10px 24px;margin:28px 0 0;padding:0;list-style:none;color:var(--ink-2);font-size:.95rem}
-  .ticks li{display:flex;align-items:center;gap:8px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:26px}
+  .cta-row .btn{min-height:52px;padding:0 24px;white-space:nowrap}
+  .ticks{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,max-content));gap:10px 22px;margin:24px 0 0;padding:0;list-style:none;color:var(--ink-2);font-size:.9rem;font-weight:500}
+  .ticks li{display:flex;align-items:center;gap:9px;white-space:nowrap}
   .ticks li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sun);flex:none}
-  .map{background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:0 20px 50px -30px rgba(15,47,68,.35)}
-  .map svg{width:100%;height:auto;display:block}
-  .map-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 6px 0;font-size:.85rem;color:var(--muted)}
-  .map-foot b{color:var(--ink);font-family:var(--display);font-size:1rem}
+  @media (max-width:600px){
+    .cta-row{flex-direction:column;align-items:stretch}
+    .cta-row .btn{width:100%;justify-content:center}
+    .ticks{grid-template-columns:1fr}
+  }
+  .hero-art{border-radius:24px;overflow:hidden;background:#0a1e2b;box-shadow:0 30px 60px -36px rgba(10,30,43,.7);border:1px solid rgba(88,195,207,.18)}
+  .hero-art svg{width:100%;height:auto;display:block}
+  .art-cap{display:grid;grid-template-columns:repeat(3,1fr);background:#0d2838;border-top:1px solid rgba(88,195,207,.18)}
+  .art-cap div{padding:16px 18px;text-align:center;border-left:1px solid rgba(88,195,207,.14)}
+  .art-cap div:first-child{border-left:0}
+  .art-cap b{display:block;font-family:var(--display);font-size:1.15rem;color:#fff;line-height:1.1}
+  .art-cap span{display:block;font-size:.78rem;color:#9fe0e8;margin-top:4px;letter-spacing:.02em}
+  @media (max-width:420px){.art-cap b{font-size:1rem}.art-cap div{padding:12px 8px}}
 
   /* strip */
   .strip{background:var(--lake);color:#fff;padding:18px 0}
   :root[data-theme="dark"] .strip,
   :root:not([data-theme="light"]) .strip{}
-  .strip .wrap{display:flex;flex-wrap:wrap;gap:10px 36px;justify-content:center;font-size:.92rem;font-weight:500}
+  .strip .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px 20px;font-size:.88rem;font-weight:500}
+  .strip span{justify-content:center;text-align:center}
   .strip span{display:flex;align-items:center;gap:8px;opacity:.95}
   .strip span::before{content:"✓";color:#ffd27a;font-weight:800}
   @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .strip{background:#0b2231} }
@@ -194,20 +203,34 @@
   @media (max-width:560px){.row{grid-template-columns:1fr}}
   .hint{font-size:.85rem;color:var(--muted)}
 
-  footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
-  footer .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:20px 40px;align-items:start}
-  @media (max-width:700px){footer .wrap{grid-template-columns:1fr}}
-  footer a{color:var(--muted)}
-  footer .fl{display:flex;flex-wrap:wrap;gap:14px}
+  footer{background:#0a1e2b;color:rgba(255,255,255,.72);font-size:.93rem;padding:56px 0 28px;margin-top:8px}
+  .f-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:36px 48px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+  @media (max-width:800px){.f-grid{grid-template-columns:1fr 1fr}.f-brand{grid-column:1/-1}}
+  @media (max-width:520px){.f-grid{grid-template-columns:1fr}}
+  .f-brand .logo{color:#fff;margin-bottom:14px}
+  .f-brand .logo svg{box-shadow:none}
+  .f-brand p{margin:0;max-width:40ch;line-height:1.6}
+  footer h4{margin:0 0 14px;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#9fe0e8;font-weight:700}
+  footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+  footer a{color:rgba(255,255,255,.85);text-decoration:none}
+  footer a:hover{color:#fff;text-decoration:underline}
+  .f-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-top:22px;font-size:.84rem;color:rgba(255,255,255,.55)}
 </style>
 </head>
 <body>
 
 <header>
   <nav class="wrap" aria-label="Main">
-    <a class="logo" href="#top" aria-label="Big Water Technology Group home">
-      <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0f2f44"/><path d="M10 40c6-8 12-8 18 0s12 8 18 0 8-6 8-6" fill="none" stroke="#58c3cf" stroke-width="5" stroke-linecap="round"/><path d="M10 28c6-8 12-8 18 0s12 8 18 0 8-6 8-6" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg>
-      <span><b>Big Water Technology Group</b><small>Lake to Lagoon IT</small></span>
+    <a class="logo" href="#top" aria-label="Big Water Technology home">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <defs><linearGradient id="mk" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a5574"/><stop offset="1" stop-color="#0b2231"/></linearGradient></defs>
+        <rect width="64" height="64" rx="16" fill="url(#mk)"/>
+        <circle cx="47" cy="18" r="5.5" fill="#e0a23a"/>
+        <path d="M9 33c6-7 12-7 18 0s12 7 18 0 9-6 13-3" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M9 43c6-7 12-7 18 0s12 7 18 0 9-6 13-3" fill="none" stroke="#58c3cf" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M15 53c5-5 9-5 14 0s9 5 14 0 7-5 11-2" fill="none" stroke="#58c3cf" stroke-width="3.5" stroke-linecap="round" opacity=".5"/>
+      </svg>
+      <span><b>Big Water Technology</b></span>
     </a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="links" onclick="const l=document.getElementById('links');l.classList.toggle('open');this.setAttribute('aria-expanded',l.classList.contains('open'))">☰<span class="sr"> Menu</span></button>
     <div class="links" id="links">
@@ -229,68 +252,78 @@
     <div>
       <span class="eyebrow">Managed IT · Okeechobee to Fellsmere</span>
       <h1>IT support that runs from the <em>Lake</em> to the <em>Lagoon</em>.</h1>
-      <p class="lead">Big Water Technology Group keeps the computers, networks, and phones working for the ranches, clinics, shops, contractors, churches, and city halls between Lake Okeechobee and the Indian River Lagoon. One flat monthly rate. A real person who answers. On site the same day when it matters.</p>
+      <p class="lead">Big Water Technology keeps the computers, networks, and phones working for the ranches, clinics, shops, contractors, churches, and city halls between Lake Okeechobee and the Indian River Lagoon. One flat monthly rate. A real person who answers. On site the same day when it matters.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#contact">Book a free network check-up</a>
-        <a class="btn btn-ghost" href="#public-sector">Government &amp; public sector →</a>
+        <a class="btn btn-primary" href="#contact">Book a free check-up</a>
+        <a class="btn btn-ghost" href="#public-sector">Public sector services</a>
       </div>
       <ul class="ticks">
-        <li>Locally owned and operated</li>
-        <li>Flat-rate, in writing, no surprises</li>
-        <li>Month to month. Earn your business every month.</li>
+        <li>Locally owned &amp; operated</li>
+        <li>Flat rate, in writing</li>
+        <li>Month to month, no contracts</li>
       </ul>
     </div>
-    <div class="map" aria-label="Stylized map of the service area from Lake Okeechobee to the Indian River Lagoon">
-      <svg viewBox="0 0 520 400" role="img" aria-hidden="true">
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 560 420" role="img">
         <defs>
-          <linearGradient id="lk" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#1b8a9c"/><stop offset="1" stop-color="#0f2f44"/></linearGradient>
-          <linearGradient id="lg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#58c3cf"/><stop offset="1" stop-color="#1b8a9c"/></linearGradient>
+          <linearGradient id="bgA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#113a52"/><stop offset="1" stop-color="#0a1e2b"/></linearGradient>
+          <radialGradient id="sunA" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffd27a"/><stop offset=".55" stop-color="#e0a23a"/><stop offset="1" stop-color="#e0a23a" stop-opacity="0"/></radialGradient>
+          <radialGradient id="lakeA" cx="40%" cy="40%" r="60%"><stop offset="0" stop-color="#3fb5c6"/><stop offset="1" stop-color="#15606f"/></radialGradient>
         </defs>
-        <!-- land -->
-        <rect x="0" y="0" width="520" height="400" rx="18" fill="#eef3e6"/>
-        <!-- pasture texture -->
-        <g stroke="#d9e3cc" stroke-width="1.2">
-          <path d="M40 330 q30 -10 60 0 t60 0 t60 0"/><path d="M60 350 q30 -10 60 0 t60 0"/><path d="M200 80 q30 -10 60 0 t60 0"/><path d="M90 120 q30 -10 60 0 t60 0"/>
+        <rect width="560" height="420" fill="url(#bgA)"/>
+        <!-- contour rings radiating from the lake -->
+        <g fill="none" stroke="#58c3cf" stroke-width="1.4">
+          <ellipse cx="128" cy="312" rx="92" ry="74" opacity=".55"/>
+          <ellipse cx="128" cy="312" rx="140" ry="112" opacity=".38"/>
+          <ellipse cx="128" cy="312" rx="190" ry="152" opacity=".26"/>
+          <ellipse cx="128" cy="312" rx="244" ry="196" opacity=".17"/>
+          <ellipse cx="128" cy="312" rx="300" ry="242" opacity=".1"/>
+          <ellipse cx="128" cy="312" rx="360" ry="290" opacity=".06"/>
         </g>
-        <!-- Atlantic -->
-        <path d="M470 0 h50 v400 h-50 c20 -80 -10 -160 20 -240 c15 -50 10 -110 -20 -160z" fill="#cfe8ec"/>
-        <!-- Indian River Lagoon -->
-        <path d="M440 20 c20 60 -5 120 15 180 c15 50 10 120 -5 200" fill="none" stroke="url(#lg)" stroke-width="14" stroke-linecap="round" opacity=".95"/>
-        <!-- Lake Okeechobee (town sits on the north shore) -->
-        <path d="M40 330 c-12 -50 30 -90 80 -86 c50 4 88 40 78 85 c-8 42 -50 65 -92 58 c-38 -6 -58 -25 -66 -57z" fill="url(#lk)"/>
-        <text x="80" y="335" font-family="Inter,system-ui" font-size="10.5" fill="#ffffff" font-weight="600" opacity=".9">LAKE OKEECHOBEE</text>
-        <text x="352" y="388" font-family="Inter,system-ui" font-size="10.5" fill="#132431" font-weight="600">INDIAN RIVER LAGOON</text>
-        <!-- roads -->
-        <g fill="none" stroke="#c9c2b3" stroke-width="3" stroke-linecap="round">
-          <path d="M140 262 L190 110"/> <!-- US-441 north to Yeehaw -->
-          <path d="M190 110 L400 95"/>  <!-- SR-60 east -->
-          <path d="M400 95 L395 180 L420 330"/> <!-- I-95 / US-1 south -->
-          <path d="M140 262 L360 262"/> <!-- SR-70 to Ft Pierce -->
+        <!-- lagoon: flowing vertical lines on the right -->
+        <g fill="none" stroke="#58c3cf" stroke-linecap="round">
+          <path d="M458 -10 c14 70 -12 120 6 190 c14 60 8 150 -6 250" stroke-width="22" opacity=".16"/>
+          <path d="M458 -10 c14 70 -12 120 6 190 c14 60 8 150 -6 250" stroke-width="9" opacity=".55"/>
+          <path d="M498 -10 c12 70 -10 130 6 200 c12 60 6 140 -4 240" stroke-width="2" opacity=".35"/>
+          <path d="M526 -10 c10 70 -8 130 6 200 c10 60 4 140 -4 240" stroke-width="1.4" opacity=".22"/>
         </g>
-        <!-- service route -->
-        <path d="M140 262 L190 110 L400 95 L405 120" fill="none" stroke="#e0a23a" stroke-width="4" stroke-dasharray="2 9" stroke-linecap="round"/>
+        <!-- sun -->
+        <circle cx="470" cy="70" r="46" fill="url(#sunA)" opacity=".55"/>
+        <circle cx="470" cy="70" r="18" fill="#f3c15c"/>
+        <!-- lake -->
+        <ellipse cx="128" cy="312" rx="62" ry="50" fill="url(#lakeA)"/>
+        <ellipse cx="128" cy="312" rx="62" ry="50" fill="none" stroke="#9fe0e8" stroke-width="1.5" opacity=".7"/>
+        <!-- route -->
+        <path d="M150 262 C 200 170, 330 130, 452 150" fill="none" stroke="#e0a23a" stroke-width="3.5" stroke-dasharray="1 10" stroke-linecap="round"/>
         <!-- pins -->
-        <g font-family="Inter,system-ui" font-size="12" font-weight="700" fill="#132431">
-          <circle cx="140" cy="262" r="9" fill="#0f2f44" stroke="#fff" stroke-width="3"/><text x="156" y="256">Okeechobee</text>
-          <circle cx="190" cy="110" r="6" fill="#e0a23a" stroke="#fff" stroke-width="2.5"/><text x="80" y="104" font-weight="500" fill="#3b4f5c">Yeehaw Junction</text>
-          <circle cx="405" cy="120" r="9" fill="#0f2f44" stroke="#fff" stroke-width="3"/><text x="318" y="140">Fellsmere</text>
-          <circle cx="432" cy="150" r="5" fill="#1b8a9c" stroke="#fff" stroke-width="2"/><text x="332" y="166" font-weight="500" fill="#3b4f5c">Sebastian</text>
-          <circle cx="428" cy="215" r="5" fill="#1b8a9c" stroke="#fff" stroke-width="2"/><text x="340" y="220" font-weight="500" fill="#3b4f5c">Vero Beach</text>
-          <circle cx="400" cy="262" r="5" fill="#1b8a9c" stroke="#fff" stroke-width="2"/><text x="312" y="282" font-weight="500" fill="#3b4f5c">Fort Pierce</text>
-          <circle cx="150" cy="60" r="5" fill="#1b8a9c" stroke="#fff" stroke-width="2"/><text x="163" y="64" font-weight="500" fill="#3b4f5c">Kenansville</text>
+        <g font-family="Inter,system-ui,sans-serif" font-weight="600">
+          <circle cx="150" cy="262" r="11" fill="#0a1e2b" stroke="#ffffff" stroke-width="3"/>
+          <circle cx="150" cy="262" r="4" fill="#ffffff"/>
+          <text x="170" y="258" font-size="15" fill="#ffffff">Okeechobee</text>
+          <text x="170" y="276" font-size="11" fill="#9fe0e8" font-weight="500" letter-spacing=".06em">THE LAKE</text>
+          <circle cx="452" cy="150" r="11" fill="#0a1e2b" stroke="#ffffff" stroke-width="3"/>
+          <circle cx="452" cy="150" r="4" fill="#ffffff"/>
+          <text x="438" y="128" font-size="15" fill="#ffffff" text-anchor="end">Fellsmere</text>
+          <text x="438" y="146" font-size="11" fill="#9fe0e8" font-weight="500" letter-spacing=".06em" text-anchor="end">THE LAGOON</text>
         </g>
+        <text x="26" y="396" font-family="Inter,system-ui,sans-serif" font-size="10.5" fill="#9fe0e8" letter-spacing=".14em" opacity=".8">LAKE OKEECHOBEE</text>
+        <text x="534" y="396" font-family="Inter,system-ui,sans-serif" font-size="10.5" fill="#9fe0e8" letter-spacing=".14em" opacity=".8" text-anchor="end">INDIAN RIVER LAGOON</text>
       </svg>
-      <div class="map-foot"><b>“Okeechobee” means big water.</b><span>Same-day on-site across the corridor</span></div>
+      <div class="art-cap">
+        <div><b>Same day</b><span>on-site response</span></div>
+        <div><b>One flat rate</b><span>quoted in writing</span></div>
+        <div><b>Okeechobee</b><span>locally based</span></div>
+      </div>
     </div>
   </div>
 </section>
 
 <div class="strip">
   <div class="wrap">
-    <span>Serving Okeechobee &amp; Indian River Counties</span>
-    <span>Business &amp; public-sector experience</span>
-    <span>Hurricane-season ready backups</span>
-    <span>Bilingual support available</span>
+    <span>Okeechobee &amp; Indian River Counties</span>
+    <span>Business &amp; public sector</span>
+    <span>Hurricane-ready backups</span>
+    <span>Bilingual support</span>
   </div>
 </div>
 
@@ -339,7 +372,7 @@
       <span class="eyebrow">Why managed, not break/fix</span>
       <h2>Fixing it after it breaks is the expensive way.</h2>
       <p class="lead">Calling someone when the server dies, then paying by the hour, worked in 1995. Today one ransomware email or a dead server in September can cost a small operation weeks of work and a lot of trust. We prevent the outage instead of billing for it.</p>
-      <p class="quote">Most of our new clients come to us after the first time something went really wrong. We’d rather meet you before that.<small>Big Water Technology Group</small></p>
+      <p class="quote">Most of our new clients come to us after the first time something went really wrong. We’d rather meet you before that.<small>Big Water Technology</small></p>
     </div>
     <ul class="checklist">
       <li><span class="dot">✓</span><div><b>Monitored around the clock, patched every week</b><small>Problems get caught and fixed before anyone notices. You get a monthly report, not a surprise invoice.</small></div></li>
@@ -401,7 +434,7 @@
       <div>
         <span class="eyebrow">About</span>
         <h2>Small by design. Serious about the work.</h2>
-        <p>Big Water Technology Group is the managed-services practice of Competence Collective LLC, a Florida company. We started it because the businesses and agencies between the lake and the lagoon deserve the same quality of IT the big metros get, from someone who lives and works here and knows the difference between a dairy and a cow-calf operation.</p>
+        <p>Big Water Technology is the managed-services practice of Competence Collective LLC, a Florida company. We started it because the businesses and agencies between the lake and the lagoon deserve the same quality of IT the big metros get, from someone who lives and works here and knows the difference between a dairy and a cow-calf operation.</p>
         <p>You will talk to the same people every time. We document everything, explain things in plain English, and never sell you something you do not need. Spanish-speaking support is available for staff who prefer it.</p>
       </div>
       <ul class="checklist">
@@ -473,17 +506,43 @@
 
 <footer>
   <div class="wrap">
-    <div>
-      <b style="color:var(--ink);font-family:var(--display)">Big Water Technology Group</b><br>
-      © <span id="yr">2026</span> Competence Collective LLC, doing business as Big Water Technology Group. All rights reserved.<br>
-      Managed IT, cybersecurity, and cloud support from Lake Okeechobee to the Indian River Lagoon.
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="logo" href="#top" aria-label="Back to top">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="16" fill="#1a5574"/>
+            <circle cx="47" cy="18" r="5.5" fill="#e0a23a"/>
+            <path d="M9 33c6-7 12-7 18 0s12 7 18 0 9-6 13-3" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+            <path d="M9 43c6-7 12-7 18 0s12 7 18 0 9-6 13-3" fill="none" stroke="#58c3cf" stroke-width="4.5" stroke-linecap="round"/>
+            <path d="M15 53c5-5 9-5 14 0s9 5 14 0 7-5 11-2" fill="none" stroke="#58c3cf" stroke-width="3.5" stroke-linecap="round" opacity=".5"/>
+          </svg>
+          <span><b>Big Water Technology</b></span>
+        </a>
+        <p>Managed IT, cybersecurity, and cloud support for businesses and local governments from Lake Okeechobee to the Indian River Lagoon.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#serve">Who we serve</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#public-sector">Public sector</a></li>
+          <li><a href="#area">Service area</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+10000000000">(000) 000-0000</a></li>
+          <li><a href="mailto:hello@bigwaterit.com">hello@bigwaterit.com</a></li>
+          <li>Mon–Fri 8am–6pm</li>
+          <li>Okeechobee &amp; Fellsmere, Florida</li>
+        </ul>
+      </div>
     </div>
-    <div class="fl">
-      <a href="#serve">Who we serve</a>
-      <a href="#services">Services</a>
-      <a href="#public-sector">Public sector</a>
-      <a href="#area">Service area</a>
-      <a href="#contact">Contact</a>
+    <div class="f-bottom">
+      <span>© <span id="yr">2026</span> Competence Collective LLC, doing business as Big Water Technology.</span>
+      <span>Serving Okeechobee and Indian River Counties, Florida.</span>
     </div>
   </div>
 </footer>

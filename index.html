@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Big Water Technology | Managed IT from Okeechobee to Fellsmere</title>
-<meta name="description" content="Locally operated managed IT, cybersecurity, and cloud support for ranches, clinics, shops, contractors, churches, and local governments from Lake Okeechobee to the Indian River Lagoon. Okeechobee · Fellsmere · Sebastian · Vero Beach.">
+<meta name="description" content="Locally operated managed IT, cybersecurity, and cloud support for ranches, clinics, shops, contractors, churches, and local governments from Lake Okeechobee to the Indian River Lagoon. Okeechobee to Fellsmere to Sebastian to Vero Beach.">
 <meta property="og:title" content="Big Water Technology">
 <meta property="og:description" content="IT support that runs from the Lake to the Lagoon. Business and public sector. Okeechobee to Fellsmere, FL.">
 <meta property="og:type" content="website">
@@ -66,8 +66,8 @@
   h2{font-size:clamp(1.7rem,3.4vw,2.5rem)}
   h3{font-size:1.2rem;font-family:var(--body);font-weight:700;letter-spacing:0}
   p{margin:0 0 1em}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--lagoon-ink);margin-bottom:.8em}
-  .eyebrow::before{content:"";width:22px;height:2px;background:var(--lagoon)}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--lagoon-ink);margin-bottom:.8em}
+
   .lead{font-size:1.15rem;color:var(--ink-2)}
   .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:var(--body);font-size:1rem;transition:.15s}
   .btn-primary{background:var(--lake);color:var(--btn-text)}
@@ -101,10 +101,10 @@
   .hero{padding:72px 0 0;position:relative;overflow:hidden}
   .hero-text{position:relative;padding-bottom:28px;padding-right:200px}
   .hero .sun{position:absolute;width:120px;height:120px;right:max(20px,calc((100% - var(--max))/2 + 20px));top:84px}
-  .wave-div{width:100%;height:130px;overflow:hidden;display:block;line-height:0}
+  .wave-div{width:100%;height:280px;overflow:hidden;display:block;line-height:0}
   .wave-div svg{width:100%;height:100%;display:block}
-  .wd1 path{stroke:var(--wave1)} .wd2 path{stroke:#58c3cf} .wd3 path{stroke:#58c3cf;opacity:.45}
-  @media (max-width:800px){.wave-div{height:72px}}
+  .wave-div .w1{stroke:var(--wave1)} .wave-div .w2{stroke:#58c3cf} .wave-div .w3{stroke:#58c3cf;opacity:.45}
+  @media (max-width:800px){.wave-div{height:150px}}
   @media (max-width:800px){.hero-text{padding-right:0}.hero .sun{width:72px;height:72px;top:72px}}
   .hero h1 em{font-style:italic;color:var(--lagoon-ink)}
   .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:26px}
@@ -160,7 +160,7 @@
 
   /* gov */
   .gov{background:linear-gradient(180deg,var(--grass-soft),var(--paper) 55%)}
-  .gov .eyebrow{color:var(--grass)} .gov .eyebrow::before{background:var(--grass)}
+  .gov .eyebrow{color:var(--grass)}
   .gov .checklist .dot{background:var(--grass-soft);color:var(--grass)}
   .callout{border-left:4px solid var(--grass);background:var(--sand);border-radius:0 14px 14px 0;padding:18px 20px;margin-top:22px;color:var(--ink-2);font-size:.97rem}
   .callout strong{color:var(--ink)}
@@ -249,7 +249,7 @@
     <circle cx="60" cy="60" r="34" fill="#f3c15c"/>
   </svg>
   <div class="wrap hero-text">
-    <span class="eyebrow">Managed IT · Okeechobee to Fellsmere</span>
+    <span class="eyebrow">Managed IT for Okeechobee to Fellsmere</span>
     <h1>Local IT.<br><em>Enterprise</em> standards.</h1>
     <p class="lead">Big Water Technology is the local managed IT provider for businesses, agencies, and organizations between Lake Okeechobee and the Indian River Lagoon. Enterprise-grade security and support, delivered by people who live here. One flat monthly rate. On site the same day when it matters.</p>
     <div class="cta-row">
@@ -263,7 +263,11 @@
     </ul>
   </div>
 </section>
-<div class="wave-div wd3" aria-hidden="true"><svg viewBox="0 0 1440 140" preserveAspectRatio="xMidYMid slice"><path d="M-60 70 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0" fill="none" stroke-width="20"/></svg></div>
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 300" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke-width="20">
+  <path class="w1" d="M-60 80 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0"/>
+  <path class="w2" d="M-60 160 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0"/>
+  <path class="w3" d="M-60 240 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0"/>
+</g></svg></div>
 
 <!-- WHO WE SERVE -->
 <section id="serve" class="serve">
@@ -283,7 +287,6 @@
     </div>
   </div>
 </section>
-<div class="wave-div wd2" aria-hidden="true"><svg viewBox="0 0 1440 140" preserveAspectRatio="xMidYMid slice"><path d="M-60 70 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0" fill="none" stroke-width="20"/></svg></div>
 
 <!-- SERVICES -->
 <section id="services" class="alt">
@@ -303,7 +306,6 @@
     </div>
   </div>
 </section>
-<div class="wave-div wd1" aria-hidden="true"><svg viewBox="0 0 1440 140" preserveAspectRatio="xMidYMid slice"><path d="M-60 70 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0" fill="none" stroke-width="20"/></svg></div>
 
 <!-- WHY MANAGED -->
 <section>
@@ -403,7 +405,7 @@
       <ul class="contact-list">
         <li>📞 <a href="tel:+17722028816">(772) 202-8816</a></li>
         <li>✉️ <a href="mailto:hello@bigwaterit.com">hello@bigwaterit.com</a></li>
-        <li>🕘 <span>Mon–Fri 8am–6pm<br><span class="hint">24/7 emergency line for managed clients</span></span></li>
+        <li>🕘 <span>Monday to Friday, 8am to 6pm<br><span class="hint">24/7 emergency line for managed clients</span></span></li>
       </ul>
       <a class="btn btn-sun" href="tel:+17722028816">Call now</a>
     </div>
@@ -460,7 +462,7 @@
         <ul>
           <li><a href="tel:+17722028816">(772) 202-8816</a></li>
           <li><a href="mailto:hello@bigwaterit.com">hello@bigwaterit.com</a></li>
-          <li>Mon–Fri 8am–6pm</li>
+          <li>Monday to Friday, 8am to 6pm</li>
           <li>Okeechobee &amp; Fellsmere, Florida</li>
         </ul>
       </div>

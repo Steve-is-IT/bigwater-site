@@ -21,7 +21,6 @@
   "description": "Local managed IT, cybersecurity, and cloud support for businesses, agencies, and local governments from Lake Okeechobee to the Indian River Lagoon, Florida.",
   "areaServed": ["Okeechobee, FL", "Fellsmere, FL", "Sebastian, FL", "Vero Beach, FL", "Fort Pierce, FL", "Okeechobee County, FL", "Indian River County, FL"],
   "telephone": "+1-772-202-8816",
-  "email": "hello@bigwaterit.com",
   "url": "https://bigwaterit.com"
 }
 </script>
@@ -374,7 +373,7 @@
       <p class="lead">Call, text, or send the form. We reply within one business day, usually faster.</p>
       <ul class="contact-list">
         <li>📞 <a href="tel:+17722028816">(772) 202-8816</a></li>
-        <li>✉️ <a href="mailto:hello@bigwaterit.com">hello@bigwaterit.com</a></li>
+        <li>✉️ <a class="em" href="#contact" data-u="hello" data-d="bigwaterit" data-t="com">email us</a></li>
         <li>🕘 <span>Monday to Friday, 8am to 6pm<br><span class="hint">24/7 emergency line for managed clients</span></span></li>
       </ul>
       <a class="btn btn-sun" href="tel:+17722028816">Call now</a>
@@ -382,7 +381,7 @@
     <div class="card">
       <!-- GitHub Pages has no backend. Point this form at Formspree, Basin, Netlify Forms, etc.
            Until then it opens an email draft in the visitor's mail client. -->
-      <form action="mailto:hello@bigwaterit.com" method="post" enctype="text/plain">
+      <form id="cform" action="#contact" method="post" enctype="text/plain">
         <div class="row">
           <div><label for="name">Name</label><input id="name" name="name" required autocomplete="name"></div>
           <div><label for="org">Organization <span class="hint">(optional)</span></label><input id="org" name="organization" autocomplete="organization"></div>
@@ -434,7 +433,7 @@
         <h4>Contact</h4>
         <ul>
           <li><a href="tel:+17722028816">(772) 202-8816</a></li>
-          <li><a href="mailto:hello@bigwaterit.com">hello@bigwaterit.com</a></li>
+          <li><a class="em" href="#contact" data-u="hello" data-d="bigwaterit" data-t="com">email us</a></li>
           <li>Monday to Friday, 8am to 6pm</li>
           <li>Okeechobee &amp; Fellsmere, Florida</li>
         </ul>
@@ -448,6 +447,8 @@
 </footer>
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
+// Email is assembled at runtime so address harvesters reading the HTML source do not see it.
+(function(){var a=null;document.querySelectorAll('a.em').forEach(function(e){a=e.dataset.u+'@'+e.dataset.d+'.'+e.dataset.t;e.href='mai'+'lto:'+a;e.textContent=a;});var f=document.getElementById('cform');if(f&&a){f.action='mai'+'lto:'+a;}})();
 document.querySelectorAll('#links a').forEach(a=>a.addEventListener('click',()=>{document.getElementById('links').classList.remove('open');document.querySelector('.menu-toggle').setAttribute('aria-expanded','false')}));
 </script>
 </body>

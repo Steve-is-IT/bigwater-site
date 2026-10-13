@@ -101,10 +101,9 @@
   .hero{padding:72px 0 0;position:relative;overflow:hidden}
   .hero-text{position:relative;padding-bottom:28px;padding-right:200px}
   .hero .sun{position:absolute;width:120px;height:120px;right:max(20px,calc((100% - var(--max))/2 + 20px));top:84px}
-  .wave-div{width:100%;height:280px;overflow:hidden;display:block;line-height:0}
+  .wave-div{width:100%;aspect-ratio:1440/320;overflow:hidden;display:block;line-height:0}
   .wave-div svg{width:100%;height:100%;display:block}
   .wave-div .w1{stroke:var(--wave1)} .wave-div .w2{stroke:#58c3cf} .wave-div .w3{stroke:#58c3cf;opacity:.45}
-  @media (max-width:800px){.wave-div{height:150px}}
   @media (max-width:800px){.hero-text{padding-right:0}.hero .sun{width:72px;height:72px;top:72px}}
   .hero h1 em{font-style:italic;color:var(--lagoon-ink)}
   .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:26px}
@@ -263,10 +262,10 @@
     </ul>
   </div>
 </section>
-<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 300" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke-width="20">
-  <path class="w1" d="M-60 80 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0"/>
-  <path class="w2" d="M-60 160 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0"/>
-  <path class="w3" d="M-60 240 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0"/>
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 320" preserveAspectRatio="xMidYMid slice"><g fill="none" stroke-width="20">
+  <path class="w1" d="M-60 90 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0"/>
+  <path class="w2" d="M-60 170 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0"/>
+  <path class="w3" d="M-60 250 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0"/>
 </g></svg></div>
 
 <!-- WHO WE SERVE -->
@@ -307,24 +306,6 @@
   </div>
 </section>
 
-<!-- WHY MANAGED -->
-<section>
-  <div class="wrap two-col">
-    <div>
-      <span class="eyebrow">Why managed, not break/fix</span>
-      <h2>Fixing it after it breaks is the expensive way.</h2>
-      <p class="lead">Calling someone when the server dies, then paying by the hour, worked in 1995. Today one ransomware email or a dead server in September can cost an organization weeks of work, real money, and public trust. We prevent the outage instead of billing for it.</p>
-      <p class="quote">Most of our new clients come to us after the first time something went really wrong. We’d rather meet you before that.<small>Big Water Technology</small></p>
-    </div>
-    <ul class="checklist">
-      <li><span class="dot">✓</span><div><b>Monitored around the clock, patched every week</b><small>Problems get caught and fixed before anyone notices. You get a monthly report, not a surprise invoice.</small></div></li>
-      <li><span class="dot">✓</span><div><b>Security that is actually turned on</b><small>MFA, endpoint protection, email filtering, and backups are in the base plan, not upsold later.</small></div></li>
-      <li><span class="dot">✓</span><div><b>Documentation you own</b><small>Passwords, network maps, licenses, and vendor contacts live in a system you keep access to. No hostage situations if you ever change providers.</small></div></li>
-      <li><span class="dot">✓</span><div><b>Plain English, straight answers</b><small>We tell you what you need, what you don’t, and what it costs. If a cheaper option is the right one, we’ll say so.</small></div></li>
-    </ul>
-  </div>
-</section>
-
 <!-- PUBLIC SECTOR -->
 <section id="public-sector" class="alt gov">
   <div class="wrap">
@@ -353,23 +334,7 @@
   </div>
 </section>
 
-<!-- SERVICE AREA -->
-<section id="area">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">Service area</span>
-      <h2>Close enough to show up.</h2>
-      <p class="lead">Remote support is instant. When hands are needed, we are on US-441, State Road 60, or I-95, not on a plane. The corridor from the lake to the lagoon is home turf.</p>
-    </div>
-    <div class="towns">
-      <div><h3><span style="background:var(--lake)"></span>The Lake</h3><ul><li>Okeechobee</li><li>Fort Drum</li><li>Buckhead Ridge</li><li>Basinger &amp; Cypress Quarters</li><li>Okeechobee County</li></ul></div>
-      <div><h3><span style="background:var(--sun)"></span>The Road Between</h3><ul><li>Yeehaw Junction</li><li>Kenansville</li><li>Vero Lake Estates</li><li>Fort Pierce</li><li>Port St. Lucie</li></ul></div>
-      <div><h3><span style="background:var(--lagoon)"></span>The Lagoon</h3><ul><li>Fellsmere</li><li>Sebastian</li><li>Vero Beach</li><li>Roseland &amp; Micco</li><li>Indian River County</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT + HOW -->
+<!-- ABOUT + SERVICE AREA -->
 <section id="about" class="alt">
   <div class="wrap">
     <div class="two-col" style="margin-bottom:44px">
@@ -385,12 +350,15 @@
         <li><span class="dot">✓</span><div><b>No long-term contracts</b><small>Month to month. If we aren’t earning it, you can leave, and you keep your documentation.</small></div></li>
       </ul>
     </div>
-    <span class="eyebrow">How it starts</span>
-    <h2 style="font-size:clamp(1.4rem,2.6vw,1.9rem)">Three steps, no pressure.</h2>
-    <div class="steps">
-      <div><h3>Free network check-up</h3><p>We come out, look at what you have, and flag anything risky. About an hour of your time. No obligation.</p></div>
-      <div><h3>A written plan and price</h3><p>One page. What we recommend, what it costs per month, and what is optional. No decoder ring needed.</p></div>
-      <div><h3>Onboarded in 30 days</h3><p>Monitoring, security, and backups in place, documentation built, and your staff know who to call.</p></div>
+    <div class="sec-head" id="area">
+      <span class="eyebrow">Service area</span>
+      <h2 style="font-size:clamp(1.4rem,2.6vw,1.9rem)">Close enough to show up.</h2>
+      <p class="lead">Remote support is instant. When hands are needed, we are on US-441, State Road 60, or I-95, not on a plane. The corridor from the lake to the lagoon is home turf.</p>
+    </div>
+    <div class="towns">
+      <div><h3><span style="background:var(--lake)"></span>The Lake</h3><ul><li>Okeechobee</li><li>Fort Drum</li><li>Buckhead Ridge</li><li>Basinger &amp; Cypress Quarters</li><li>Okeechobee County</li></ul></div>
+      <div><h3><span style="background:var(--sun)"></span>The Road Between</h3><ul><li>Yeehaw Junction</li><li>Kenansville</li><li>Vero Lake Estates</li><li>Fort Pierce</li><li>Port St. Lucie</li></ul></div>
+      <div><h3><span style="background:var(--lagoon)"></span>The Lagoon</h3><ul><li>Fellsmere</li><li>Sebastian</li><li>Vero Beach</li><li>Roseland &amp; Micco</li><li>Indian River County</li></ul></div>
     </div>
   </div>
 </section>

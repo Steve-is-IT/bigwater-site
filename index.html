@@ -32,7 +32,7 @@
     --lake:#0f2f44; --lake-2:#174a66; --lagoon:#1b8a9c; --lagoon-soft:#dff1f3; --lagoon-ink:#126c7b;
     --grass:#4f7a3a; --grass-soft:#e7efdf;
     --sun:#e0a23a;
-    --btn-text:#ffffff;
+    --btn-text:#ffffff; --wave1:#0f2f44;
     --r:16px; --max:1140px;
     --display:"Fraunces",Georgia,"Times New Roman",serif;
     --body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -44,7 +44,7 @@
       --lake:#8dd3df; --lake-2:#a9e0e8; --lagoon:#4fc1d0; --lagoon-soft:#0f2e36; --lagoon-ink:#7fd6e2;
       --grass:#9bcf86; --grass-soft:#17301f;
       --sun:#f0b858;
-      --btn-text:#0b1d26;
+      --btn-text:#0b1d26; --wave1:#ffffff;
     }
   }
   :root[data-theme="dark"]{
@@ -68,7 +68,7 @@
   p{margin:0 0 1em}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--lagoon-ink);margin-bottom:.8em}
   .eyebrow::before{content:"";width:22px;height:2px;background:var(--lagoon)}
-  .lead{font-size:1.15rem;color:var(--ink-2);max-width:62ch}
+  .lead{font-size:1.15rem;color:var(--ink-2)}
   .btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font-family:var(--body);font-size:1rem;transition:.15s}
   .btn-primary{background:var(--lake);color:var(--btn-text)}
   .btn-primary:hover{background:var(--lake-2)}
@@ -88,7 +88,6 @@
   .links a:hover{color:var(--lagoon-ink)}
   .links .btn{padding:10px 18px;font-size:.92rem}
   .links a.btn-primary{color:var(--btn-text)}
-  .hero{background:radial-gradient(800px 420px at 90% -10%, var(--lagoon-soft), transparent 65%)}
   .menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:10px;padding:8px 11px;color:var(--ink);font-size:1.1rem;cursor:pointer}
   @media (max-width:800px){
     .links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:var(--paper);padding:16px 20px 22px;border-bottom:1px solid var(--line);align-items:flex-start;gap:18px}
@@ -99,9 +98,12 @@
   .sr{position:absolute;left:-9999px}
 
   /* hero */
-  .hero{padding:64px 0 48px;position:relative;overflow:hidden}
-  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
-  @media (max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+  .hero{padding:72px 0 0;position:relative;overflow:hidden}
+  .hero-text{position:relative;padding-bottom:40px;padding-right:200px}
+  .hero .sun{position:absolute;width:120px;height:120px;right:max(20px,calc((100% - var(--max))/2 + 20px));top:84px}
+  .hero .waves{display:block;width:100%;height:auto;padding-bottom:28px}
+  .hero .w1{stroke:var(--wave1)} .hero .w2{stroke:#58c3cf} .hero .w3{stroke:#58c3cf;opacity:.4}
+  @media (max-width:800px){.hero-text{padding-right:0}.hero .sun{width:72px;height:72px;top:72px}}
   .hero h1 em{font-style:italic;color:var(--lagoon-ink)}
   .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:26px}
   .cta-row .btn{min-height:52px;padding:0 24px;white-space:nowrap}
@@ -113,14 +115,6 @@
     .cta-row .btn{width:100%;justify-content:center}
     .ticks{grid-template-columns:1fr}
   }
-  .hero-art{border-radius:24px;overflow:hidden;background:#0a1e2b;box-shadow:0 30px 60px -36px rgba(10,30,43,.7);border:1px solid rgba(88,195,207,.18)}
-  .hero-art svg{width:100%;height:auto;display:block}
-  .art-cap{display:grid;grid-template-columns:repeat(3,1fr);background:#0d2838;border-top:1px solid rgba(88,195,207,.18)}
-  .art-cap div{padding:16px 18px;text-align:center;border-left:1px solid rgba(88,195,207,.14)}
-  .art-cap div:first-child{border-left:0}
-  .art-cap b{display:block;font-family:var(--display);font-size:1.15rem;color:#fff;line-height:1.1}
-  .art-cap span{display:block;font-size:.78rem;color:#9fe0e8;margin-top:4px;letter-spacing:.02em}
-  @media (max-width:420px){.art-cap b{font-size:1rem}.art-cap div{padding:12px 8px}}
 
   /* strip */
   .strip{background:var(--lake);color:#fff;padding:18px 0}
@@ -136,7 +130,7 @@
   /* sections */
   section{padding:72px 0}
   .alt{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .sec-head{max-width:70ch;margin-bottom:34px}
+  .sec-head{margin-bottom:34px}
   .grid{display:grid;gap:18px;grid-template-columns:repeat(3,1fr)}
   @media (max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
   @media (max-width:580px){.grid{grid-template-columns:1fr}}
@@ -248,84 +242,34 @@
 
 <!-- HERO -->
 <section class="hero">
+  <svg class="sun" viewBox="0 0 120 120" aria-hidden="true">
+    <circle cx="60" cy="60" r="54" fill="none" stroke="#e0a23a" stroke-width="1.5" opacity=".35"/>
+    <circle cx="60" cy="60" r="34" fill="#f3c15c"/>
+  </svg>
+  <div class="wrap hero-text">
+    <span class="eyebrow">Managed IT · Okeechobee to Fellsmere</span>
+    <h1>Local IT.<br><em>Enterprise</em> standards.</h1>
+    <p class="lead">Big Water Technology is the local managed IT provider for businesses, agencies, and organizations between Lake Okeechobee and the Indian River Lagoon. Enterprise-grade security and support, delivered by people who live here. One flat monthly rate. On site the same day when it matters.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#contact">Book a free check-up</a>
+      <a class="btn btn-ghost" href="#public-sector">Public sector services</a>
+    </div>
+    <ul class="ticks">
+      <li>Locally owned &amp; operated</li>
+      <li>Flat rate, in writing</li>
+      <li>Month to month, no contracts</li>
+    </ul>
+  </div>
   <div class="wrap">
-    <div>
-      <span class="eyebrow">Managed IT · Okeechobee to Fellsmere</span>
-      <h1>IT support that runs from the <em>Lake</em> to the <em>Lagoon</em>.</h1>
-      <p class="lead">Big Water Technology is the local managed IT provider for businesses, agencies, and organizations between Lake Okeechobee and the Indian River Lagoon. Enterprise-grade security and support, delivered by people who live here. One flat monthly rate. On site the same day when it matters.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#contact">Book a free check-up</a>
-        <a class="btn btn-ghost" href="#public-sector">Public sector services</a>
-      </div>
-      <ul class="ticks">
-        <li>Locally owned &amp; operated</li>
-        <li>Flat rate, in writing</li>
-        <li>Month to month, no contracts</li>
-      </ul>
-    </div>
-    <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 560 420" role="img">
-        <defs>
-          <linearGradient id="bgA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#113a52"/><stop offset="1" stop-color="#0a1e2b"/></linearGradient>
-          <radialGradient id="sunA" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffd27a"/><stop offset=".55" stop-color="#e0a23a"/><stop offset="1" stop-color="#e0a23a" stop-opacity="0"/></radialGradient>
-          <radialGradient id="lakeA" cx="40%" cy="40%" r="60%"><stop offset="0" stop-color="#3fb5c6"/><stop offset="1" stop-color="#15606f"/></radialGradient>
-        </defs>
-        <rect width="560" height="420" fill="url(#bgA)"/>
-        <!-- contour rings radiating from the lake -->
-        <g fill="none" stroke="#58c3cf" stroke-width="1.4">
-          <ellipse cx="128" cy="312" rx="92" ry="74" opacity=".55"/>
-          <ellipse cx="128" cy="312" rx="140" ry="112" opacity=".38"/>
-          <ellipse cx="128" cy="312" rx="190" ry="152" opacity=".26"/>
-          <ellipse cx="128" cy="312" rx="244" ry="196" opacity=".17"/>
-          <ellipse cx="128" cy="312" rx="300" ry="242" opacity=".1"/>
-          <ellipse cx="128" cy="312" rx="360" ry="290" opacity=".06"/>
-        </g>
-        <!-- lagoon: flowing vertical lines on the right -->
-        <g fill="none" stroke="#58c3cf" stroke-linecap="round">
-          <path d="M458 -10 c14 70 -12 120 6 190 c14 60 8 150 -6 250" stroke-width="22" opacity=".16"/>
-          <path d="M458 -10 c14 70 -12 120 6 190 c14 60 8 150 -6 250" stroke-width="9" opacity=".55"/>
-          <path d="M498 -10 c12 70 -10 130 6 200 c12 60 6 140 -4 240" stroke-width="2" opacity=".35"/>
-          <path d="M526 -10 c10 70 -8 130 6 200 c10 60 4 140 -4 240" stroke-width="1.4" opacity=".22"/>
-        </g>
-        <!-- sun -->
-        <circle cx="470" cy="70" r="46" fill="url(#sunA)" opacity=".55"/>
-        <circle cx="470" cy="70" r="18" fill="#f3c15c"/>
-        <!-- lake -->
-        <ellipse cx="128" cy="312" rx="62" ry="50" fill="url(#lakeA)"/>
-        <ellipse cx="128" cy="312" rx="62" ry="50" fill="none" stroke="#9fe0e8" stroke-width="1.5" opacity=".7"/>
-        <!-- route -->
-        <path d="M150 262 C 200 170, 330 130, 452 150" fill="none" stroke="#e0a23a" stroke-width="3.5" stroke-dasharray="1 10" stroke-linecap="round"/>
-        <!-- pins -->
-        <g font-family="Inter,system-ui,sans-serif" font-weight="600">
-          <circle cx="150" cy="262" r="11" fill="#0a1e2b" stroke="#ffffff" stroke-width="3"/>
-          <circle cx="150" cy="262" r="4" fill="#ffffff"/>
-          <text x="170" y="258" font-size="15" fill="#ffffff">Okeechobee</text>
-          <text x="170" y="276" font-size="11" fill="#9fe0e8" font-weight="500" letter-spacing=".06em">THE LAKE</text>
-          <circle cx="452" cy="150" r="11" fill="#0a1e2b" stroke="#ffffff" stroke-width="3"/>
-          <circle cx="452" cy="150" r="4" fill="#ffffff"/>
-          <text x="438" y="128" font-size="15" fill="#ffffff" text-anchor="end">Fellsmere</text>
-          <text x="438" y="146" font-size="11" fill="#9fe0e8" font-weight="500" letter-spacing=".06em" text-anchor="end">THE LAGOON</text>
-        </g>
-        <text x="26" y="396" font-family="Inter,system-ui,sans-serif" font-size="10.5" fill="#9fe0e8" letter-spacing=".14em" opacity=".8">LAKE OKEECHOBEE</text>
-        <text x="534" y="396" font-family="Inter,system-ui,sans-serif" font-size="10.5" fill="#9fe0e8" letter-spacing=".14em" opacity=".8" text-anchor="end">INDIAN RIVER LAGOON</text>
-      </svg>
-      <div class="art-cap">
-        <div><b>Same day</b><span>on-site response</span></div>
-        <div><b>One flat rate</b><span>quoted in writing</span></div>
-        <div><b>Okeechobee</b><span>locally based</span></div>
-      </div>
-    </div>
+    <svg class="waves" viewBox="0 0 1100 240" aria-hidden="true">
+      <g fill="none" stroke-linecap="round">
+        <path class="w1" d="M12 70 c70-60 140-60 210 0 s140 60 210 0 s140-60 210 0 s140 60 210 0 s110-50 160-36" stroke-width="20"/>
+        <path class="w2" d="M12 140 c70-60 140-60 210 0 s140 60 210 0 s140-60 210 0 s140 60 210 0 s110-50 160-36" stroke-width="20"/>
+        <path class="w3" d="M12 210 c70-60 140-60 210 0 s140 60 210 0 s140-60 210 0 s140 60 210 0 s110-50 160-36" stroke-width="14"/>
+      </g>
+    </svg>
   </div>
 </section>
-
-<div class="strip">
-  <div class="wrap">
-    <span>Okeechobee &amp; Indian River Counties</span>
-    <span>Business &amp; public sector</span>
-    <span>Hurricane-ready backups</span>
-    <span>Bilingual support</span>
-  </div>
-</div>
 
 <!-- WHO WE SERVE -->
 <section id="serve" class="serve">

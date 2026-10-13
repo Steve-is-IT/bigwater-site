@@ -99,10 +99,12 @@
 
   /* hero */
   .hero{padding:72px 0 0;position:relative;overflow:hidden}
-  .hero-text{position:relative;padding-bottom:40px;padding-right:200px}
+  .hero-text{position:relative;padding-bottom:28px;padding-right:200px}
   .hero .sun{position:absolute;width:120px;height:120px;right:max(20px,calc((100% - var(--max))/2 + 20px));top:84px}
-  .hero .waves{display:block;width:100%;height:auto;padding-bottom:28px}
-  .hero .w1{stroke:var(--wave1)} .hero .w2{stroke:#58c3cf} .hero .w3{stroke:#58c3cf;opacity:.4}
+  .wave-div{width:100%;height:130px;overflow:hidden;display:block;line-height:0}
+  .wave-div svg{width:100%;height:100%;display:block}
+  .wd1 path{stroke:var(--wave1)} .wd2 path{stroke:#58c3cf} .wd3 path{stroke:#58c3cf;opacity:.45}
+  @media (max-width:800px){.wave-div{height:72px}}
   @media (max-width:800px){.hero-text{padding-right:0}.hero .sun{width:72px;height:72px;top:72px}}
   .hero h1 em{font-style:italic;color:var(--lagoon-ink)}
   .cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:26px}
@@ -260,16 +262,8 @@
       <li>Month to month, no contracts</li>
     </ul>
   </div>
-  <div class="wrap">
-    <svg class="waves" viewBox="0 0 1100 240" aria-hidden="true">
-      <g fill="none" stroke-linecap="round">
-        <path class="w1" d="M12 70 c70-60 140-60 210 0 s140 60 210 0 s140-60 210 0 s140 60 210 0 s110-50 160-36" stroke-width="20"/>
-        <path class="w2" d="M12 140 c70-60 140-60 210 0 s140 60 210 0 s140-60 210 0 s140 60 210 0 s110-50 160-36" stroke-width="20"/>
-        <path class="w3" d="M12 210 c70-60 140-60 210 0 s140 60 210 0 s140-60 210 0 s140 60 210 0 s110-50 160-36" stroke-width="14"/>
-      </g>
-    </svg>
-  </div>
 </section>
+<div class="wave-div wd3" aria-hidden="true"><svg viewBox="0 0 1440 140" preserveAspectRatio="xMidYMid slice"><path d="M-60 70 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0" fill="none" stroke-width="20"/></svg></div>
 
 <!-- WHO WE SERVE -->
 <section id="serve" class="serve">
@@ -289,6 +283,7 @@
     </div>
   </div>
 </section>
+<div class="wave-div wd2" aria-hidden="true"><svg viewBox="0 0 1440 140" preserveAspectRatio="xMidYMid slice"><path d="M-60 70 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0" fill="none" stroke-width="20"/></svg></div>
 
 <!-- SERVICES -->
 <section id="services" class="alt">
@@ -308,6 +303,7 @@
     </div>
   </div>
 </section>
+<div class="wave-div wd1" aria-hidden="true"><svg viewBox="0 0 1440 140" preserveAspectRatio="xMidYMid slice"><path d="M-60 70 c160-60 320-60 480 0 s320 60 480 0 s320-60 480 0 s320 60 480 0 s320-60 480 0" fill="none" stroke-width="20"/></svg></div>
 
 <!-- WHY MANAGED -->
 <section>
